@@ -43,6 +43,17 @@ $ http PUT :3000/todos/2/items/1 done=true \
 $ http DELETE :3000/todos/2/items/1 \
 > Authorization:'auth_token'
 
+# get auth token
+$ http :3000/auth/login email=foo@bar.com password=foobar
+# get todos from API v1
+$ http :3000/todos Accept:'application/vnd.todos.v1+json' \
+> Authorization:'auth_token'
+(`http :3000/todos Accept:'application/vnd.todos.v1+json' \
+> Authorization:'auth_token'`)
+# attempt to get from API v2
+$ http :3000/todos Accept:'application/vnd.todos.v2+json' \
+> Authorization:'auth_token'
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
