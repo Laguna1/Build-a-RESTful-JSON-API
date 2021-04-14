@@ -61,6 +61,17 @@ $ http :3000/todos Accept:'application/vnd.todos.v1+json' Authorization:'eyJ0e..
 $ http :3000/todos Accept:'application/vnd.todos.v2+json' \
 > Authorization:'auth_token'
 
+pagination
+# request without page
+$ http :3000/todos Accept:'application/vnd.todos.v1+json' \
+> Authorization:'auth_token'
+# request for page 1
+$ http :3000/todos page==1 Accept:'application/vnd.todos.v1+json' \
+> Authorization:'auth_token'
+# request for page 2
+$ http :3000/todos page==2 Accept:'application/vnd.todos.v1+json' \
+> Authorization:'auth_token'
+
 `Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MTg0MzczMjZ9.6aLnrJ6qdaB5nhP77BRMR94oJYEt_5LuFwh-Ab31RmE'`
 
 
