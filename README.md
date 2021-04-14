@@ -61,6 +61,8 @@ $ http :3000/todos Accept:'application/vnd.todos.v1+json' Authorization:'eyJ0e..
 $ http :3000/todos Accept:'application/vnd.todos.v2+json' \
 > Authorization:'auth_token'
 
+`Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MTg0MzczMjZ9.6aLnrJ6qdaB5nhP77BRMR94oJYEt_5LuFwh-Ab31RmE'`
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
